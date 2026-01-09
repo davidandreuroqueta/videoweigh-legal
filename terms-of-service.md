@@ -241,7 +241,7 @@ We may assign these Terms. You may not assign your rights without our consent.
 For questions about these Terms, please contact us:
 
 - **Email:** soporte@videoweigh.com
-- **Website:** https://videoweigh.com
+- **Website:** https://videoweigh.com *(Coming Soon)*
 
 ---
 
