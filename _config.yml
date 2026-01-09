@@ -1,0 +1,16 @@
+title: VideoWeigh
+description: Legal Documents
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-seo-tag
+
+# SEO
+url: "https://davidandreuroqueta.github.io"
+baseurl: "/videoweigh-legal"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
