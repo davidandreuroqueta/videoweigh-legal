@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmar Email - VideoWeigh</title>
+  <link rel="icon" type="image/png" href="https://davidandreuroqueta.github.io/videoweigh-legal/favicon.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #003366 0%, #0066CC 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .icon-container {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-success {
+      background: rgba(52, 199, 89, 0.15);
+    }
+
+    .icon-loading {
+      background: rgba(0, 102, 204, 0.15);
+    }
+
+    .icon-error {
+      background: rgba(255, 59, 48, 0.15);
+    }
+
+    .icon-container svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(0, 102, 204, 0.2);
+      border-top-color: #0066CC;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .description {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .email {
+      font-weight: 600;
+      color: #1a1a1a;
+      word-break: break-all;
+    }
+
+    .info-box {
+      background: rgba(0, 102, 204, 0.1);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .info-box svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: #0066CC;
+    }
+
+    .info-box p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background: #0066CC;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #0066CC;
+      border: 2px solid #0066CC;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(0, 102, 204, 0.05);
+    }
+
+    .store-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .store-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: #1a1a1a;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    .store-btn:hover {
+      opacity: 0.85;
+    }
+
+    .store-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e0e0e0;
+      margin: 24px 0;
+    }
+
+    .footer-text {
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* Hidden states */
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading State -->
+  <div id="loading-state" class="container">
+    <div class="icon-container icon-loading">
+      <div class="spinner"></div>
+    </div>
+    <h1>Verificando...</h1>
+    <p class="description">Estamos confirmando tu correo electronico</p>
+  </div>
+
+  <!-- Success State -->
+  <div id="success-state" class="container hidden">
+    <div class="icon-container icon-success">
+      <svg fill="none" stroke="#34C759" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </div>
+    <h1>Email Confirmado</h1>
+    <p class="description">
+      Tu cuenta ha sido verificada correctamente.<br>
+      Ya puedes iniciar sesion en la app.
+    </p>
+
+    <div class="info-box">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <p>Abre la app VideoWeigh e inicia sesion con tu correo y contrasena.</p>
+    </div>
+
+    <button id="open-app-btn" class="btn btn-primary" onclick="openApp()">
+      Abrir VideoWeigh
+    </button>
+
+    <div class="divider"></div>
+
+    <p class="footer-text">Si no tienes la app instalada:</p>
+    <div class="store-buttons">
+      <a href="#" id="appstore-link" class="store-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        App Store
+      </a>
+      <a href="#" id="playstore-link" class="store-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+        </svg>
+        Play Store
+      </a>
+    </div>
+  </div>
+
+  <!-- Error State -->
+  <div id="error-state" class="container hidden">
+    <div class="icon-container icon-error">
+      <svg fill="none" stroke="#FF3B30" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+      </svg>
+    </div>
+    <h1>Error de Verificacion</h1>
+    <p class="description" id="error-message">
+      No se pudo verificar tu correo electronico. El enlace puede haber expirado o ya fue utilizado.
+    </p>
+
+    <a href="videoweigh://login" class="btn btn-primary">
+      Abrir VideoWeigh
+    </a>
+
+    <div class="divider"></div>
+
+    <p class="footer-text">Si el problema persiste, intenta registrarte de nuevo en la app.</p>
+  </div>
+
+  <script>
+    // Configuration
+    const APP_SCHEME = 'videoweigh';
+    const APP_STORE_URL = 'https://apps.apple.com/app/videoweigh/id000000000'; // TODO: Update with real ID
+    const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.videoweigh.app';
+
+    // DOM Elements
+    const loadingState = document.getElementById('loading-state');
+    const successState = document.getElementById('success-state');
+    const errorState = document.getElementById('error-state');
+    const errorMessage = document.getElementById('error-message');
+    const appstoreLink = document.getElementById('appstore-link');
+    const playstoreLink = document.getElementById('playstore-link');
+
+    // Set store links
+    appstoreLink.href = APP_STORE_URL;
+    playstoreLink.href = PLAY_STORE_URL;
+
+    // Parse URL parameters (Supabase sends tokens in hash fragment)
+    function getParams() {
+      const params = {};
+
+      // Check hash fragment first (Supabase default)
+      if (window.location.hash) {
+        const hash = window.location.hash.substring(1);
+        const pairs = hash.split('&');
+        pairs.forEach(pair => {
+          const [key, value] = pair.split('=');
+          if (key && value) {
+            params[key] = decodeURIComponent(value);
+          }
+        });
+      }
+
+      // Also check query params
+      const urlParams = new URLSearchParams(window.location.search);
+      urlParams.forEach((value, key) => {
+        params[key] = value;
+      });
+
+      return params;
+    }
+
+    // Show specific state
+    function showState(state) {
+      loadingState.classList.add('hidden');
+      successState.classList.add('hidden');
+      errorState.classList.add('hidden');
+
+      if (state === 'loading') loadingState.classList.remove('hidden');
+      if (state === 'success') successState.classList.remove('hidden');
+      if (state === 'error') errorState.classList.remove('hidden');
+    }
+
+    // Try to open the app
+    function openApp() {
+      const params = getParams();
+
+      // Build deep link URL with tokens if available
+      let deepLink = `${APP_SCHEME}://`;
+
+      if (params.access_token) {
+        // Include tokens for automatic login
+        deepLink += `auth/callback?access_token=${params.access_token}`;
+        if (params.refresh_token) {
+          deepLink += `&refresh_token=${params.refresh_token}`;
+        }
+        if (params.type) {
+          deepLink += `&type=${params.type}`;
+        }
+      } else {
+        // Just open the app to login screen
+        deepLink += 'login';
+      }
+
+      // Try to open the app
+      window.location.href = deepLink;
+
+      // Fallback: after a delay, the user is probably still here (app not installed)
+      // We don't redirect automatically, just let them use the store buttons
+    }
+
+    // Detect platform
+    function getPlatform() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      if (/android/i.test(ua)) return 'android';
+      if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) return 'ios';
+      return 'web';
+    }
+
+    // Main initialization
+    function init() {
+      const params = getParams();
+
+      console.log('Confirmation page loaded with params:', params);
+
+      // Check if this is a valid confirmation
+      // Supabase sends: access_token, refresh_token, expires_in, token_type, type
+      // type can be: signup, recovery, invite, magiclink
+
+      if (params.error) {
+        // Supabase returned an error
+        errorMessage.textContent = params.error_description || 'Error al verificar el correo electronico.';
+        showState('error');
+        return;
+      }
+
+      if (params.access_token || params.type === 'signup' || params.type === 'email_change') {
+        // Success! Token received or signup confirmation
+        showState('success');
+
+        // Auto-try to open app after a short delay
+        setTimeout(() => {
+          openApp();
+        }, 1500);
+        return;
+      }
+
+      // If we have any token-related params, consider it a success
+      if (params.token_hash || params.token) {
+        showState('success');
+        return;
+      }
+
+      // No valid params - might be direct access or expired link
+      // Show success anyway (user can still open the app)
+      showState('success');
+    }
+
+    // Run on page load
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
