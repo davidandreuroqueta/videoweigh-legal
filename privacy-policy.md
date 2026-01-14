@@ -136,19 +136,59 @@ Revoke permissions for camera, microphone, or location access through your devic
 
 ---
 
-## 8. Children's Privacy
+## 8. Account Deletion {#account-deletion}
+
+### How to Delete Your Account
+
+You can permanently delete your VideoWeigh account directly from the app:
+
+1. Open the VideoWeigh app
+2. Go to **Settings** (gear icon)
+3. Scroll down and tap **"Eliminar cuenta"** (Delete Account)
+4. Confirm your decision when prompted
+
+### What Data Is Deleted
+
+When you delete your account, the following data is **permanently and immediately deleted**:
+
+**From our servers:**
+- All your videos and thumbnails stored in the cloud
+- Your user profile and account information
+- All capture records and competition data
+- Authentication credentials
+
+**From your device:**
+- Local SQLite database
+- Locally stored videos and thumbnails
+- App cache and session data
+
+### Data Retention After Deletion
+
+- **Retention period**: None. All data is deleted immediately upon request.
+- **Recovery**: Account deletion is **permanent and cannot be undone**.
+- **Backups**: Deleted data is not retained in backups.
+
+### Important Notes
+
+- You must be logged in to delete your account
+- Ensure you have an internet connection to complete the deletion
+- If you are part of a team, your captures will no longer be visible to teammates after deletion
+
+---
+
+## 9. Children's Privacy
 
 VideoWeigh is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.
 
 ---
 
-## 9. International Data Transfers
+## 10. International Data Transfers
 
 If you are accessing the App from outside Spain, your data may be transferred to and processed in other countries where our service providers operate.
 
 ---
 
-## 10. Changes to This Policy
+## 11. Changes to This Policy
 
 We may update this Privacy Policy from time to time. We will notify you of any changes by:
 - Posting the new Privacy Policy in the App
@@ -156,7 +196,7 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 
 ---
 
-## 11. Contact Us
+## 12. Contact Us
 
 If you have questions about this Privacy Policy, please contact us at:
 
@@ -165,9 +205,9 @@ If you have questions about this Privacy Policy, please contact us at:
 
 ---
 
-## 12. Specific Disclosures
+## 13. Specific Disclosures
 
-### 12.1 California Residents (CCPA)
+### 13.1 California Residents (CCPA)
 
 California residents have additional rights under the California Consumer Privacy Act (CCPA):
 - Right to know what personal information is collected
@@ -175,7 +215,7 @@ California residents have additional rights under the California Consumer Privac
 - Right to opt-out of sale of personal information (we do not sell data)
 - Right to non-discrimination
 
-### 12.2 European Union Residents (GDPR)
+### 13.2 European Union Residents (GDPR)
 
 EU residents have rights under the General Data Protection Regulation (GDPR):
 - Right to access, rectification, and erasure
