@@ -1,4 +1,4 @@
----
+﻿---
 title: VideoWeigh - Legal Documents
 ---
 
@@ -10,6 +10,7 @@ Legal documentation for the VideoWeigh mobile application.
 
 - [Privacy Policy](./privacy-policy)
 - [Terms of Service](./terms-of-service)
+- [Soporte](./support)
 
 ---
 
@@ -22,3 +23,5 @@ For questions about these documents, contact us at:
 ---
 
 *VideoWeigh - Fishing Competition App with Video Verification*
+
+
