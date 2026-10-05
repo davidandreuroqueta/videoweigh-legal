@@ -135,7 +135,7 @@ Revoke permissions for camera, microphone, location or notifications through you
 - **Competition Data**: Retained for the duration of the competition plus 12 months for dispute resolution
 - **Videos**: Retained until you delete them or request account deletion
 - **Usage Analytics**: Anonymized after 12 months
-- **Notification Identifier**: Deactivated (no more notices are sent) when you sign out, when your session moves to another device, or after 90 days without the App registering it again (the App re-registers it every 7 days while in use). Permanently deleted 30 days after deactivation, or when your account is deleted (see Section 13)
+- **Notification Identifier**: Deactivated (no more notices are sent) when you sign out, when your session moves to another device, or after 90 days without the App registering it again (the App re-registers it every 7 days while in use). Permanently deleted 30 days after deactivation, or when your account is deleted (see Section 14)
 
 ---
 
