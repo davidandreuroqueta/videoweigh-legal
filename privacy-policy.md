@@ -5,9 +5,9 @@ description: Privacy Policy for the VideoWeigh mobile application
 
 # Privacy Policy - VideoWeigh
 
-**Last Updated:** 1 de Enero de 2026
+**Last Updated:** 2 de Octubre de 2026
 
-**Effective Date:** 1 de Enero de 2026
+**Effective Date:** 2 de Octubre de 2026
 
 ---
 
@@ -39,6 +39,7 @@ When you use our App, we automatically collect:
 - **Device Information**: Device model, operating system version
 - **Location Data**: GPS coordinates when capturing fishing catches (only when you grant permission)
 - **Usage Data**: App interactions for improving user experience
+- **Notification Data**: If you allow notifications, a device notification identifier and related technical data (see Section 14)
 
 ### 2.3 Media Content
 
@@ -55,7 +56,7 @@ We use the collected information for:
 - **Competition Features**: To verify and record fishing catches
 - **Synchronization**: To sync your data across devices
 - **Anti-Fraud**: To verify the authenticity of captures using timestamp and location data
-- **Communication**: To send important updates about competitions
+- **Communication**: To send important updates about competitions, including push notifications (see Section 14)
 - **App Improvement**: To analyze usage patterns and improve our services
 
 ---
@@ -91,6 +92,7 @@ We do not sell your personal information. We may share your data with:
 
 - **Supabase**: Authentication and database services
 - **Cloudflare**: Video storage and content delivery
+- **Apple (Apple Push Notification service) and Google (Firebase Cloud Messaging)**: Delivery of push notifications to your device (see Section 14)
 
 ### 5.2 Competition Organizers
 
@@ -123,7 +125,7 @@ Request deletion of your account and associated data
 Request your data in a portable format
 
 ### 6.5 Withdraw Consent
-Revoke permissions for camera, microphone, or location access through your device settings
+Revoke permissions for camera, microphone, location or notifications through your device settings or the App settings
 
 ---
 
@@ -133,6 +135,7 @@ Revoke permissions for camera, microphone, or location access through your devic
 - **Competition Data**: Retained for the duration of the competition plus 12 months for dispute resolution
 - **Videos**: Retained until you delete them or request account deletion
 - **Usage Analytics**: Anonymized after 12 months
+- **Notification Identifier**: Deactivated (no more notices are sent) when you sign out, when your session moves to another device, or after 90 days without the App registering it again (the App re-registers it every 7 days while in use). Permanently deleted 30 days after deactivation, or when your account is deleted (see Section 13)
 
 ---
 
@@ -184,7 +187,7 @@ VideoWeigh is not intended for children under 13 years of age. We do not knowing
 
 ## 10. International Data Transfers
 
-If you are accessing the App from outside Spain, your data may be transferred to and processed in other countries where our service providers operate.
+If you are accessing the App from outside Spain, your data may be transferred to and processed in other countries where our service providers operate, including Apple and Google (push notification delivery).
 
 ---
 
@@ -230,4 +233,46 @@ EU residents have rights under the General Data Protection Regulation (GDPR):
 
 ---
 
-*This Privacy Policy was last updated on 1 de Enero de 2026*
+## 14. Push Notifications
+
+If you allow notifications on your device, we use them to tell you about competitions you take part in and to remind you about catches.
+
+### 14.1 What We Store
+
+- **Device notification identifier** (push token): an identifier issued by Apple or Google that lets us send notifications to your device
+- **Platform and provider**: whether your device uses Apple (iOS) or Google (Android)
+- **Environment**: development or production
+- **App identifier**: the identifier of the VideoWeigh app
+- **App installation identifier**: generated when you install the App; it is not a hardware identifier
+- **Date of last registration**: when the App last registered the identifier with us
+
+We do not use this data to track you or to build advertising profiles.
+
+### 14.2 Why We Use It
+
+- Notices about changes to competitions you are part of (for example, changes to an event or its status), sent through our servers
+- Reminders about catches that have not been uploaded. These are scheduled on your device itself: they do not send data to our servers and do not go through Apple or Google
+
+### 14.3 Legal Basis
+
+Performance of the service you requested (contract). We will only send marketing or promotional notifications with your prior consent.
+
+### 14.4 Service Providers
+
+Only notices about changes to events are delivered through **Apple Push Notification service** (iOS) or **Google Firebase Cloud Messaging** (Android). The identifier and the notification content pass through them, and they act as data processors on our behalf. Catch reminders do not use these services.
+
+### 14.5 Retention
+
+The notification identifier is deactivated, and no more notices are sent, when you sign out, when your session moves to another device, or after 90 days without the App registering it again (the App re-registers it every 7 days while you use it). Deactivated records are permanently deleted 30 days later. When your account is deleted, these records are deleted with it.
+
+### 14.6 How to Turn Notifications Off
+
+You can disable notifications at any time in the App settings or in your device's system settings. The App will keep working normally.
+
+### 14.7 Lock Screen Visibility
+
+The text of a notification may be visible on your device's lock screen. It may include the name, date and location of an event. It never includes weights or data of other participants. You can hide notification previews in your device's system settings.
+
+---
+
+*This Privacy Policy was last updated on 2 de Octubre de 2026*
