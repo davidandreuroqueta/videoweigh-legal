@@ -172,6 +172,7 @@ To keep published rankings correct and to resolve competition disputes (legitima
 
 - **Catch records** (weight or length, species, team, event, and the judges' validations and penalties), **in anonymized form and indefinitely**. They are no longer linked to your name, email or contact details.
 - **Videos and thumbnails of those catches**, for **one year** after you delete your account. A video can show your image or voice, so after that year it is permanently deleted from our servers.
+- **Safety and support records**: SOS alerts you sent during an event (location and time, with your name removed) and the messages you exchanged with our support team. They are kept to account for incidents during competitions and to answer any later claim, and are linked only to the anonymous record.
 
 ### Data Retention After Deletion
 
