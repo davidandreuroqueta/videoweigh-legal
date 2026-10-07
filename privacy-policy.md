@@ -133,7 +133,8 @@ Revoke permissions for camera, microphone, location or notifications through you
 
 - **Account Data**: Retained while your account is active
 - **Competition Data**: Retained for the duration of the competition plus 12 months for dispute resolution
-- **Videos**: Retained until you delete them or request account deletion
+- **Videos**: Retained while your account is active. If you delete your account, your videos are permanently deleted one year after the deletion
+- **Catch records after account deletion**: Kept indefinitely in anonymized form (no name, email or contact details) to preserve the integrity of published rankings and to resolve competition disputes (legitimate interest)
 - **Usage Analytics**: Anonymized after 12 months
 - **Notification Identifier**: Deactivated (no more notices are sent) when you sign out, when your session moves to another device, or after 90 days without the App registering it again (the App re-registers it every 7 days while in use). Permanently deleted 30 days after deactivation, or when your account is deleted (see Section 14)
 
@@ -143,7 +144,7 @@ Revoke permissions for camera, microphone, location or notifications through you
 
 ### How to Delete Your Account
 
-You can permanently delete your VideoWeigh account directly from the app:
+You can delete your VideoWeigh account directly from the app:
 
 1. Open the VideoWeigh app
 2. Go to **Settings** (gear icon)
@@ -152,30 +153,39 @@ You can permanently delete your VideoWeigh account directly from the app:
 
 ### What Data Is Deleted
 
-When you delete your account, the following data is **permanently and immediately deleted**:
+When you delete your account, the following data is **deleted or anonymized immediately**:
 
 **From our servers:**
-- All your videos and thumbnails stored in the cloud
-- Your user profile and account information
-- All capture records and competition data
-- Authentication credentials
+- Your name, email address, phone number and federation licence number (your profile is kept only as an anonymous "Deleted user" record)
+- Your sign-in credentials and all your sessions: you can no longer sign in with this account
+- Notification identifiers, notification preferences and device sessions
+- Your club memberships and licences, and your registrations and team memberships in events that have not started yet
 
 **From your device:**
 - Local SQLite database
 - Locally stored videos and thumbnails
 - App cache and session data
 
+### What Data Is Kept
+
+To keep published rankings correct and to resolve competition disputes (legitimate interest), we keep:
+
+- **Catch records** (weight or length, species, team, event, and the judges' validations and penalties), **in anonymized form and indefinitely**. They are no longer linked to your name, email or contact details.
+- **Videos and thumbnails of those catches**, for **one year** after you delete your account. A video can show your image or voice, so after that year it is permanently deleted from our servers.
+
 ### Data Retention After Deletion
 
-- **Retention period**: None. All data is deleted immediately upon request.
-- **Recovery**: Account deletion is **permanent and cannot be undone**.
+- **Personal data**: Deleted or anonymized immediately upon request.
+- **Videos**: Permanently deleted one year after the account deletion.
+- **Anonymized catch records**: Kept indefinitely as part of the competition history.
+- **Recovery**: Account deletion is **permanent and cannot be undone**. You can register again with the same email address, but it will be a new account.
 - **Backups**: Deleted data is not retained in backups.
 
 ### Important Notes
 
 - You must be logged in to delete your account
 - Ensure you have an internet connection to complete the deletion
-- If you are part of a team, your captures will no longer be visible to teammates after deletion
+- If you are part of a team, your catches stay in the event results in anonymized form
 
 ---
 
